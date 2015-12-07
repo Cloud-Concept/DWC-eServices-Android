@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/lay_rel_img"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circle_border"
+        android:padding="1dp"
+        android:scaleType="center">
+
+        <custom.DWCRoundedImageView
+            android:id="@+id/view"
+            android:layout_width="71dp"
+            android:layout_height="71dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/avatar" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="mdpeowpoewfpoew"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/text_size_label"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:layout_toEndOf="@+id/lay_rel_img" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textSize="@dimen/text_size_value"
+        android:layout_below="@+id/tvFullName"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/lay_rel_img"
+        android:text="Status:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/grey" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView7"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/text_size_value"
+        android:layout_toRightOf="@+id/textView7"
+        android:textColor="@color/black"
+        android:text="enwodoenwdeo"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView7"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textSize="@dimen/text_size_value"
+        android:layout_toEndOf="@+id/lay_rel_img"
+        android:text="Passport Number:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/grey"
+         />
+
+    <TextView
+        android:id="@+id/tvpassportNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView8"
+        android:textSize="@dimen/text_size_value"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/textView8"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black"
+        android:text="enwodoenwdeo"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvVisaExpiryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView8"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/lay_rel_img"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textSize="@dimen/text_size_value"
+        android:text="Visa Expiry:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/grey" />
+
+    <TextView
+        android:id="@+id/tvVisaExpiry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvVisaExpiryLabel"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/text_size_value"
+        android:layout_toRightOf="@+id/tvVisaExpiryLabel"
+        android:textColor="@color/black"
+        android:text="enwodoenwdeo"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/tvVisaExpiryLabel"
+        android:background="@color/grey" />
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    >
+
+
+    <custom.CorisandeRegularTextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Small Text"
+        android:textSize="12sp"
+        android:gravity="right|top"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        android:layout_marginTop="5dp"
+        android:id="@+id/pay_title" />
+
+    <custom.CorisandeLightTextView
+        android:layout_width="0dp"
+        fontPath="Corisande-Light.ttf"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:gravity="left"
+        android:text="Small Text"
+        android:textSize="11sp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/pay_text"
+        android:layout_gravity="center_vertical" />
+</LinearLayout>

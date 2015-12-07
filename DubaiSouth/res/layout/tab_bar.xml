@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/black_night"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/relativeTabBarHome"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tvHome"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Home"
+                android:textColor="@color/grey" />
+
+            <ImageView
+                android:id="@+id/imageTabBarHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/tvHome"
+                android:background="@mipmap/slide_home" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeTabBarRequest"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/imageTabBarRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_above="@+id/tvRequest"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/slide_myrequest" />
+
+            <TextView
+                android:id="@+id/tvRequest"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Request"
+                android:textColor="@color/grey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeTabBarReport"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/imageTabBarReports"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/tvReports"
+                android:background="@mipmap/slide_reports" />
+
+            <TextView
+                android:id="@+id/tvReports"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Reports"
+                android:textColor="@color/grey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeTabBarDashboard"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/imageTabBarDashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="1dp"
+                android:layout_above="@+id/tvDashboard"
+                android:background="@mipmap/slide_dashboard" />
+
+            <TextView
+                android:id="@+id/tvDashboard"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Dashboard"
+                android:textColor="@color/grey" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

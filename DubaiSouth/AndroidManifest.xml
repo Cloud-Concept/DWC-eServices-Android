@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cloudconcept.dwc"
+    android:installLocation="internalOnly"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="21" />
+
+    <permission
+        android:name="cloudconcept.dwc.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="cloudconcept.dwc.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <application
+        android:name=".DWCApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/dwc_launcher"
+        android:label="@string/app_name"
+        android:manageSpaceActivity="com.salesforce.androidsdk.ui.ManageSpaceActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme2">
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomepageActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name=".CompanyDocumentsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name=".ReportsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragmentActivity.ShowDetailsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name=".ThankYouActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name=".EmployeeListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragmentActivity.NocActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragmentActivity.CompanyNocActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragmentActivity.CardActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragmentActivity.LeasingShowDetailsActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragmentActivity.NameReservationActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragmentActivity.ChangeAndRemovalActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragmentActivity.BaseActivityLauncher"
+            android:label="@string/title1"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name=".ViewStatementShowDetails"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragmentActivity.ShareHolderActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragmentActivity.VisaActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragmentActivity.PreviewActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragmentActivity.RequestTrueCopyActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragmentActivity.LicenseCancellationActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragmentActivity.HomeCompanyDocumentsActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragmentActivity.LicenseActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name="fragment.License.Change.ActivitiesActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name=".ShowDetailsMyRequestsActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name=".DirectorShowDetailsActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name=".AccessCardShowDetailsActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+        <activity
+            android:name=".LegalRepresentativesShowDetailsActivity"
+            android:label="@string/title_activity_main_noc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan" />
+
+        <receiver android:name=".QuickAccessWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/quick_access_widget_info" />
+        </receiver>
+    </application>
+
+</manifest>

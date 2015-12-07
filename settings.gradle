@@ -1,0 +1,5 @@
+include ':forcedroid:libs:SmartSync', ':library', ':look_v1.2.1', ':sdk-v1.0.0'
+include ':forcedroid:external:cordova:framework'
+include ':forcedroid:libs:SmartStore'
+include ':DubaiSouth'
+include ':forcedroid:libs:SalesforceSDK'
