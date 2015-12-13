@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
 public class StoreData {
+
     private Context context;
     String DATABASE_NAME = "DWC";
     private SharedPreferences sharedPreferences;
@@ -12,9 +13,9 @@ public class StoreData {
     String TAG = "StoreData";
 
     public StoreData(Context ctx) {
+
         super();
         this.context = ctx;
-
         sharedPreferences = context.getSharedPreferences(DATABASE_NAME,
                 Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();

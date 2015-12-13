@@ -100,4 +100,17 @@
     <string name="configure">Configure</string>
     <string name="add_widget">Add widget</string>
 
+    <string name="single_cocktail_name">DWC Quick Action</string>
+    <string name="list_cocktail_name">ListCocktailExample</string>
+    <string name="description_single">DWC quick service launcher</string>
+    <string name="description_list">DWC quick service launcher</string>
+
+    <string name="title">Galaxy Note4 Revolving ProtoType</string>
+    <string name="main_text">Application can be used with extended Area</string>
+    <string name="empty_list">Empty</string>
+    <string name="feeds_cocktail_name">FeedsCocktailExample</string>
+    <string name="description_feeds">Sample panel for Feeds cocktail</string>
+    <string name="feeds_contents">This is feeds</string>
+    <string name="vertical_text">test DWC Services</string>
+
 </resources>

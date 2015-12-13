@@ -13,6 +13,8 @@
         android:name="cloudconcept.dwc.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+
     <uses-permission android:name="cloudconcept.dwc.C2D_MESSAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -180,6 +182,17 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/quick_access_widget_info" />
         </receiver>
+
+        <receiver android:name="cloudconcept.dwc.CocktailSampleProvider">
+            <intent-filter>
+                <action android:name="com.samsung.android.cocktail.action.COCKTAIL_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.samsung.android.cocktail.provider"
+                android:resource="@xml/single_cocktail" />
+        </receiver>
+
     </application>
 
 </manifest>
