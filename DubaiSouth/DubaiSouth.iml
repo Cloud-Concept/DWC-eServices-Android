@@ -78,11 +78,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="library-2.4.0" level="project" />
     <orderEntry type="library" exported="" name="gson-2.3" level="project" />
-    <orderEntry type="library" exported="" name="picasso-2.4.0" level="project" />
     <orderEntry type="library" exported="" name="androidsvg-1.2.1" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-23.1.0" level="project" />
     <orderEntry type="module" module-name="SalesforceSDK" exported="" />
-    <orderEntry type="module" module-name="look_v1.2.1" exported="" />
-    <orderEntry type="module" module-name="sdk-v1.0.0" exported="" />
   </component>
 </module>

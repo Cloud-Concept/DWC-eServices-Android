@@ -2489,6 +2489,7 @@ public class Utilities {
         InitializePayAndSubmitView(convertView);
 
         if (relatedServiceType == RelatedServiceType.RelatedServiceTypeNameReservation) {
+            drawableService.setImageResource(R.mipmap.name_reservation);
             Utilities.showloadingDialog(activity);
             new ClientManager(activity, SalesforceSDKManager.getInstance().getAccountType(), SalesforceSDKManager.getInstance().getLoginOptions(), SalesforceSDKManager.getInstance().shouldLogoutWhenTokenRevoked()).getRestClient(activity, new ClientManager.RestClientCallback() {
                 @Override

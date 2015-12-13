@@ -13,6 +13,7 @@ import cloudconcept.dwc.CompanyDocumentsActivity;
 import cloudconcept.dwc.DirectorShowDetailsActivity;
 import cloudconcept.dwc.EmployeeListActivity;
 import cloudconcept.dwc.LegalRepresentativesShowDetailsActivity;
+import cloudconcept.dwc.RenewContractServiceActivity;
 import cloudconcept.dwc.ReportsActivity;
 import cloudconcept.dwc.ShowDetailsMyRequestsActivity;
 import cloudconcept.dwc.ThankYouActivity;
@@ -585,5 +586,16 @@ public class ActivitiesLauncher {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.putExtra("object", ObjectAsStr);
         applicationContext.startActivity(intent);
+    }
+
+    public static void openRenewContractServiceActivity(Context applicationContext,Contract_DWC__c contract_dwc__c) {
+        intent = new Intent(applicationContext, RenewContractServiceActivity.class);
+        gson = new Gson();
+        String ObjectAsStr = gson.toJson(contract_dwc__c);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("object", ObjectAsStr);
+        applicationContext.startActivity(intent);
+
     }
 }
