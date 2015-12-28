@@ -16,8 +16,9 @@ dependencies {
 }
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion '22.0.1'
+    compileSdkVersion 21
+    buildToolsVersion "23.0.2"
+
     buildTypes {
         release {
             minifyEnabled true

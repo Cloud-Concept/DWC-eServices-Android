@@ -290,6 +290,7 @@ public class RenewContractServiceActivity extends Activity implements View.OnCli
                     Case _case = SFResponseManager.parseCaseObject(response.toString());
                     String message = String.format(getString(R.string.ServiceThankYouReservation), _case.getCaseNumber());
                     ActivitiesLauncher.openThankYouActivity(RenewContractServiceActivity.this, _case.getCaseNumber());
+                    finish();
                 }
 
                 @Override

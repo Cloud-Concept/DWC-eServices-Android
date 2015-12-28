@@ -74,7 +74,9 @@ public class NotificationsAdapter extends ArrayAdapter<NotificationManagement> {
             public void onClick(View view) {
                 //  Mark this Notification as read
                 if (!objects.get(position).isMessageRead()) {
-                    Utilities.showloadingDialog(context);
+                    if (!Utilities.getIsProgressLoading()) {
+                        Utilities.showloadingDialog(context);
+                    }
                     new ClientManager(context, SalesforceSDKManager.getInstance().getAccountType(), SalesforceSDKManager.getInstance().getLoginOptions(), SalesforceSDKManager.getInstance().shouldLogoutWhenTokenRevoked()).getRestClient(context, new ClientManager.RestClientCallback() {
                         @Override
                         public void authenticatedRestClient(RestClient client) {
@@ -92,7 +94,9 @@ public class NotificationsAdapter extends ArrayAdapter<NotificationManagement> {
                                         @Override
                                         public void onSuccess(RestRequest request, RestResponse response) {
                                             Log.d("MyTag", "onSuccess " + response.toString());
-                                            Utilities.dismissLoadingDialog();
+                                            if (Utilities.getIsProgressLoading()) {
+                                                Utilities.dismissLoadingDialog();
+                                            }
                                             objects.get(position).setIsMessageRead(true);
                                             notifyDataSetChanged();
                                             new StoreData(context).setNotificationCount(new StoreData(context).getNotificationCount() - 1 + "");

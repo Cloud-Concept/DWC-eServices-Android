@@ -66,11 +66,12 @@ public class NotificationFragment extends Fragment implements SwipyRefreshLayout
     private int top;
     private int index;
     private String result = "";
-private Handler handler;
+    private Handler handler;
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.notifications, container, false);
-        handler=new Handler();
+        handler = new Handler();
         lstNotifications = (ListView) view.findViewById(R.id.lstNotifications);
         mSwipeRefreshLayout = (SwipyRefreshLayout) view.findViewById(R.id.activity_main_swipe_refresh_layout);
         mSwipeRefreshLayout.setOnRefreshListener(this);
@@ -108,7 +109,7 @@ private Handler handler;
                             public void run() {
                                 Gson g = new Gson();
                                 User user = g.fromJson(new StoreData(getActivity()).getUserDataAsString(), User.class);
-                                String attUrl = client.getClientInfo().resolveUrl("/services/apexrest/MobileNotificationsReadWebService?AccountId=" + user.get_contact().get_account().getID()).toString()+(InflatedNotificationManagements.size()>0?"":("&CreatedDate="+InflatedNotificationManagements.get(0).getCreatedDate()));
+                                String attUrl = client.getClientInfo().resolveUrl("/services/apexrest/MobileNotificationsReadWebService?AccountId=" + user.get_contact().get_account().getID()).toString() + (InflatedNotificationManagements.size() > 0 ? "" : ("&CreatedDate=" + InflatedNotificationManagements.get(0).getCreatedDate()));
 
                                 HttpClient httpclient = new DefaultHttpClient();
                                 HttpGet httppost = new HttpGet(attUrl);
@@ -122,9 +123,9 @@ private Handler handler;
                                     handler.post(new Runnable() {
                                         @Override
                                         public void run() {
-                                            if(result.toLowerCase().contains("success")){
+                                            if (result.toLowerCase().contains("success")) {
                                                 new StoreData(getActivity()).setNotificationCount("0");
-                                                ((BaseActivity)getActivity()).ManageBadgeNotification();
+                                                ((BaseActivity) getActivity()).ManageBadgeNotification();
                                                 CallOnRefreshNotificationService(CallType.REFRESH, offset, limit, client);
                                             }
                                         }
@@ -177,21 +178,21 @@ private Handler handler;
 
                         InflatedNotificationManagements.addAll(notificationManagements);
                     } else {
-                        if(callType==CallType.REFRESH)
-                            InflatedNotificationManagements=new ArrayList<NotificationManagement>();
+                        if (callType == CallType.REFRESH)
+                            InflatedNotificationManagements = new ArrayList<NotificationManagement>();
                         InflatedNotificationManagements.addAll(notificationManagements);
                     }
                     loadMoreResponse = result.toString();
                     if (callType == CallType.LOADMORE || callType == CallType.REFRESH) {
                         mSwipeRefreshLayout.setRefreshing(false);
-                        ((NotificationsAdapter)lstNotifications.getAdapter()).notifyDataSetChanged();
+                        ((NotificationsAdapter) lstNotifications.getAdapter()).notifyDataSetChanged();
                     } else if (callType == CallType.FIRSTTIME) {
                         Utilities.dismissLoadingDialog();
                     }
 
 //                    lstNotifications.setAdapter(new NotificationBaseAdapter(getActivity(), getActivity().getApplicationContext(), R.layout.notifications_row_item, InflatedNotificationManagements));
                     lstNotifications.setAdapter(new NotificationsAdapter(getActivity(), R.layout.notifications_row_item, R.id.tvNotificationMessage, InflatedNotificationManagements));
-                    ((NotificationsAdapter)lstNotifications.getAdapter()).notifyDataSetChanged();
+                    ((NotificationsAdapter) lstNotifications.getAdapter()).notifyDataSetChanged();
                     restoreListPosition();
                 }
 
@@ -223,7 +224,7 @@ private Handler handler;
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, final int i, long l) {
-        if(!InflatedNotificationManagements.get(i).isMessageRead()) {
+        if (!InflatedNotificationManagements.get(i).isMessageRead()) {
             Utilities.showloadingDialog(getActivity());
             new ClientManager(getActivity(), SalesforceSDKManager.getInstance().getAccountType(), SalesforceSDKManager.getInstance().getLoginOptions(), SalesforceSDKManager.getInstance().shouldLogoutWhenTokenRevoked()).getRestClient(getActivity(), new ClientManager.RestClientCallback() {
                 @Override
@@ -233,7 +234,7 @@ private Handler handler;
                         return;
                     } else {
                         Map<String, Object> caseFields = new HashMap<String, Object>();
-                        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                         caseFields.put("Read_Date_and_Time__c", sdf.format(new Date(System.currentTimeMillis())));
                         caseFields.put("isMessageRead__c", true);
                         try {
@@ -244,9 +245,9 @@ private Handler handler;
                                     Log.d("MyTag", "onSuccess " + response.toString());
                                     Utilities.dismissLoadingDialog();
                                     InflatedNotificationManagements.get(i).setIsMessageRead(true);
-                                    ((NotificationsAdapter)lstNotifications.getAdapter()).notifyDataSetChanged();
-                                    new StoreData(getActivity()).setNotificationCount(new StoreData(getActivity()).getNotificationCount()-1+"");
-                                    ((BaseActivity)getActivity()).ManageBadgeNotification();
+                                    ((NotificationsAdapter) lstNotifications.getAdapter()).notifyDataSetChanged();
+                                    new StoreData(getActivity()).setNotificationCount(new StoreData(getActivity()).getNotificationCount() - 1 + "");
+                                    ((BaseActivity) getActivity()).ManageBadgeNotification();
                                 }
 
                                 @Override
